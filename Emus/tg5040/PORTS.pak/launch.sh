@@ -1,10 +1,5 @@
 #!/bin/sh
 
-while :; do
-    syncsettings.elf
-done &
-LOOP_PID=$!
-
 source /mnt/SDCARD/System/etc/ex_config
 
 echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -15,5 +10,3 @@ PORTS_DIR=/mnt/SDCARD/Roms/PORTS
 cd $PORTS_DIR/
 
 /bin/sh "$@"
-
-kill $LOOP_PID

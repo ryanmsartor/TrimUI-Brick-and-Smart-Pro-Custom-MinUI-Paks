@@ -1,10 +1,5 @@
 #!/bin/sh
 
-while :; do
-    syncsettings.elf
-done &
-LOOP_PID=$!
-
 export picodir=/mnt/SDCARD/Emus/$PLATFORM/PICO.pak/PICO8_Wrapper
 cd $picodir
 export PATH=$PATH:$PWD/bin
@@ -27,5 +22,3 @@ main() {
 }
 
 main "$1"
-
-kill $LOOP_PID

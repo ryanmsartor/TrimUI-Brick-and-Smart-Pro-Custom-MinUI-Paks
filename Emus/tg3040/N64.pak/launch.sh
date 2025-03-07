@@ -1,10 +1,5 @@
 #!/bin/sh
 
-while :; do
-    syncsettings.elf
-done &
-LOOP_PID=$!
-
 echo $0 $*
 
 EMU_DIR=/mnt/SDCARD/Emus/$PLATFORM/N64.pak/mupen64plus
@@ -53,5 +48,3 @@ HOME="$EMU_DIR" ./mupen64plus "$ROM_PATH"
 rm -f "$TEMP_ROM"
 
 kill -9 $(pidof gptokeyb)
-
-kill $LOOP_PID
