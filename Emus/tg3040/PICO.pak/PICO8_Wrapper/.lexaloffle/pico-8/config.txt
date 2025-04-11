@@ -59,7 +59,7 @@ mix_buffer_size 1024
 map_scancodes 
 
 
-use_wget 0 // (Linux) 1 to use wget for downloads instead of libcurl (must be installed)
+use_wget 1 // (Linux) 1 to use wget for downloads instead of libcurl (must be installed)
 
 
 
