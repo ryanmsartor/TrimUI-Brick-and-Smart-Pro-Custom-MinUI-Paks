@@ -7,9 +7,9 @@ LOOP_PID=$!
 
 export picodir=/mnt/SDCARD/Emus/$PLATFORM/PICO.pak/PICO8_Wrapper
 cd $picodir
-export PATH=$PATH:$PWD/bin
+export PATH=$PWD/bin:$PATH
 export HOME=$picodir
-export PATH=${picodir}:$PATH
+#export PATH=${picodir}:$PATH
 export LD_LIBRARY_PATH="$picodir/lib:/usr/lib:$LD_LIBRARY_PATH"
 
 if ! [ -f /mnt/SDCARD/Emus/$PLATFORM/PICO.pak/PICO8_Wrapper/bin/pico8_64 ] || ! [ -f /mnt/SDCARD/Emus/$PLATFORM/PICO.pak/PICO8_Wrapper/bin/pico8.dat ]; then
